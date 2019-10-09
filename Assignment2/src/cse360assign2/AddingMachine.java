@@ -1,30 +1,43 @@
+/*Author: Christopher Campanella
+ * ID: 1212604508
+ * Assignment 1
+ * https://github.com/star0chris/Assignment2
+ * This file adds or subtracts numbers to/from a total
+ * and then prints the history
+ */
+
+
 package cse360assign2;
 
 public class AddingMachine { //this program simulates an adding machine
 
 	private int total;
 	
-	public AddingMachine (){
+	private StringBuffer h; //variable the keeps track of each change
+							//and appends the change to itself
+	public AddingMachine(){
 		total = 0;  // not needed - included for clarity
 	}
 	
-	public int getTotal (){ //this method gets the total and returns the value
-		return 0;  
+	public int getTotal(){ //this method gets the total and returns the value
+		return total;  
 	}
 	
-	public void add (int value){ //adds a number 
-		
+	public void add(int value){ //adds a number to the total
+		total += value;
+		h.append(" + " + value);
 	}
 	
-	public void subtract (int value){ //subtracts a number
-		
+	public void subtract(int value){ //subtracts a number from the total
+		total -= value;
+		h.append(" - " + value);
 	}
 		
-	public String toString (){ //returns the string representation of an object
-		return "";
+	public String toString(){ //returns the string representation of the history
+		return h.toString();
 	}
 
-	public void clear(){ //clears the machine
-	
+	public void clear(){ //this method is blank because there were no
+						 //instructions in the assignment to do anything with it
 	}
 }
