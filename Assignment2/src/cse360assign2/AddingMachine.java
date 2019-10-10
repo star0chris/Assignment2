@@ -37,7 +37,8 @@ public class AddingMachine { //this program simulates an adding machine
 		return h.toString();
 	}
 
-	public void clear(){ //this method is blank because there were no
-						 //instructions in the assignment to do anything with it
+	public void clear(){ //clears the adding machine
+		total = 0;
+		h.delete(0, h.length());
 	}
 }
